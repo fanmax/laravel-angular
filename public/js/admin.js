@@ -1,0 +1,18 @@
+app.config(['$routeProvider',function($routeProvider){
+    $routeProvider.
+        when('/',{controller:'adminController',
+            templateUrl:'templates/admin/admin.html'}).
+        when('/post',{controller:'postController',
+            templateUrl:'templates/admin/post.html'}).
+        when('/tag',{controller:'tagController',
+            templateUrl:'templates/admin/tag.html'}).
+        when('/comment',{controller:'commentController',
+            templateUrl:'templates/admin/comment.html'}).
+        when('/user',{controller:'userController',
+            templateUrl:'templates/admin/user.html'}).
+        when('/profile',{controller:'profileController',
+            templateUrl:'templates/admin/profile.html'}).
+        when('/logout',{controller:'logoutController',
+            templateUrl:'templates/admin/logout.html'}).
+        otherwise({redirectTo:'/'});
+}]);
